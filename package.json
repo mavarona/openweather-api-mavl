@@ -1,0 +1,28 @@
+{
+    "name": "openweather-api-mavl",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha",
+        "watch": "tsc -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mavarona/openweather-api-mavl.git"
+    },
+    "author": "mavlmac",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mavarona/openweather-api-mavl/issues"
+    },
+    "homepage": "https://github.com/mavarona/openweather-api-mavl#readme",
+    "dependencies": {
+        "axios": "^0.18.0"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.1.4",
+        "nock": "^10.0.6"
+    }
+}
