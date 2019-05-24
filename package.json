@@ -2,7 +2,8 @@
     "name": "openweather-api-mavl",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "scripts": {
         "test": "mocha",
         "watch": "tsc -w"

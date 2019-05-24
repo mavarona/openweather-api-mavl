@@ -46,9 +46,7 @@ export class ApiService {
             filter = `q=${name},${codeCountry}`;
         }
         const url = `${URL_LOCALHOST}${CURRENT}${filter}${params}`;
-        return axios.get(url)
-            .then(res =>  { return res.data })
-            .catch(err => { return err});
+        return this.requestApi(url);
     }
     /**
      * Get the weather searched by the geolocation
@@ -63,9 +61,7 @@ export class ApiService {
             filter = `lat=${geo.lat}&lon=${geo.lon}`;
         }
         const url = `${URL_LOCALHOST}${CURRENT}${filter}${params}`;
-        return axios.get(url)
-            .then(res =>  { return res.data })
-            .catch(err => { return err});
+        return this.requestApi(url);
     }
     /**
      * Get the weather searched by zip code and code country
@@ -81,8 +77,15 @@ export class ApiService {
             filter = `zip=${cp},${codeCountry}`;
         }
         const url = `${URL_LOCALHOST}${CURRENT}${filter}${params}`;
+        return this.requestApi(url);
+    }
+    /**
+     * the request to Api
+     * @param url the url of the call to the Api
+     */
+    private requestApi(url: string){
         return axios.get(url)
-            .then(res =>  { return res.data })
-            .catch(err => { return err});
+                    .then(res =>  { return res.data })
+                    .catch(err => { return err});
     }
 }

@@ -31,4 +31,9 @@ export declare class ApiService {
      * @param codeCountry code of the country
      */
     findByZipCode(cp: string, codeCountry?: string): Promise<any>;
+    /**
+     * the request to Api
+     * @param url the url of the call to the Api
+     */
+    private requestApi;
 }
